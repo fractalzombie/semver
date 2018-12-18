@@ -1,0 +1,17 @@
+language: php
+dist: trusty
+sudo: false
+
+matrix:
+  include:
+    - php: 7.2
+
+install:
+  - travis_retry composer install --no-suggest --prefer-dist -n -o
+
+script:
+  - mkdir -p build/logs
+  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+after_success:
+  - vendor/bin/coveralls -v
