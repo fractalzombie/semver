@@ -4,8 +4,15 @@ build:
       tests:
         override:
           - php-scrutinizer-run
+    coverage:
+      tests:
+        override:
+          - command: ./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+            coverage:
+              file: build/logs/clover.xml
+              format: clover
   environment:
-    php: 7.2
+    php: 7.1
 
 filter:
   excluded_paths:

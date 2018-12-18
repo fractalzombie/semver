@@ -4,7 +4,7 @@ sudo: false
 
 matrix:
   include:
-    - php: 7.2
+    - php: 7.1
 
 install:
   - travis_retry composer install --no-suggest --prefer-dist -n -o
