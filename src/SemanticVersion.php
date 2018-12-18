@@ -21,7 +21,21 @@ class SemanticVersion implements VersionInterface
      *
      * @var string
      */
-    protected const REGEX_PATTERN = '/^([0-9]+)\.([0-9]+)\.([0-9]+)/i';
+    protected const REGEX_PATTERN = '/(?:\d+\.?){3}/i';
+
+    /**
+     * Semantic version template.
+     *
+     * @const string
+     */
+    protected const VERSION_TEMPLATE = 'major.minor.patch';
+
+    /**
+     * Semantic version delimiter.
+     *
+     * @const string
+     */
+    protected const VERSION_DELIMITER = '.';
 
     /**
      * @var int
@@ -64,10 +78,10 @@ class SemanticVersion implements VersionInterface
     public static function fromString(string $version): VersionInterface
     {
         if (!preg_match(static::REGEX_PATTERN, $version)) {
-            throw new ParseVersionException('major.minor.patch', $version);
+            throw new ParseVersionException(static::VERSION_TEMPLATE, $version);
         }
 
-        [$major, $minor, $patch] = explode('.', $version);
+        [$major, $minor, $patch] = explode(static::VERSION_DELIMITER, $version);
 
         return new static((int)$major, (int)$minor, (int)$patch);
     }
@@ -81,7 +95,7 @@ class SemanticVersion implements VersionInterface
      */
     public function version(bool $withPatch = true): string
     {
-        return ($withPatch)
+        return $withPatch
             ? "{$this->major}.{$this->minor}.{$this->patch}"
             : "{$this->major}.{$this->minor}";
     }

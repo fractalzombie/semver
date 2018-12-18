@@ -8,7 +8,7 @@ namespace Fractal\SemVer;
  *
  * @author Mikhail Shtanko <fractalzombie@gmail.com>
  */
-class Operator
+final class Operator
 {
     /**
      * Greater than operator.
