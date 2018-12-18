@@ -7,8 +7,6 @@ namespace Fractal\SemVer\Contracts;
  * Interface CompareInterface
  *
  * @author Mikhail Shtanko <fractalzombie@gmail.com>
- *
- * @codeCoverageIgnore
  */
 interface CompareInterface
 {

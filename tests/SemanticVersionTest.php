@@ -71,4 +71,82 @@ class SemanticVersionTest extends TestCase
             VersionInterface::class, $version
         );
     }
+
+    /**
+     * @test
+     */
+    public function it_cant_compare_with_greater_than_operator()
+    {
+        $one = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $two = SemanticVersion::fromString(static::VALID_TEST_VERSION_TWO);
+
+        $this->assertFalse($one->gt($two));
+        $this->assertTrue($two->gt($one));
+    }
+
+    /**
+     * @test
+     */
+    public function it_cant_compare_with_greater_than_or_equal_to_operator()
+    {
+        $one = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $anotherOne = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $two = SemanticVersion::fromString(static::VALID_TEST_VERSION_TWO);
+
+        $this->assertFalse($one->gte($two));
+        $this->assertTrue($two->gte($one));
+        $this->assertTrue($one->gte($anotherOne));
+    }
+
+    /**
+     * @test
+     */
+    public function it_cant_compare_with_less_than_operator()
+    {
+        $one = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $two = SemanticVersion::fromString(static::VALID_TEST_VERSION_TWO);
+
+        $this->assertFalse($two->lt($one));
+        $this->assertTrue($one->lt($two));
+    }
+
+    /**
+     * @test
+     */
+    public function it_cant_compare_with_less_than_or_equal_to_operator()
+    {
+        $one = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $anotherOne = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $two = SemanticVersion::fromString(static::VALID_TEST_VERSION_TWO);
+
+        $this->assertFalse($two->lte($one));
+        $this->assertTrue($one->lte($two));
+        $this->assertTrue($one->lte($anotherOne));
+    }
+
+    /**
+     * @test
+     */
+    public function it_cant_compare_with_equal_to_operator()
+    {
+        $one = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $anotherOne = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $two = SemanticVersion::fromString(static::VALID_TEST_VERSION_TWO);
+
+        $this->assertFalse($two->eq($one));
+        $this->assertTrue($one->eq($anotherOne));
+    }
+
+    /**
+     * @test
+     */
+    public function it_cant_compare_with_not_equal_to_operator()
+    {
+        $one = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $anotherOne = SemanticVersion::fromString(static::VALID_TEST_VERSION_ONE);
+        $two = SemanticVersion::fromString(static::VALID_TEST_VERSION_TWO);
+
+        $this->assertFalse($one->ne($anotherOne));
+        $this->assertTrue($one->ne($two));
+    }
 }
