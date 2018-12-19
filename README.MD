@@ -5,6 +5,7 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/fractalzombie/semver/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/fractalzombie/semver/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fractalzombie/semver/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fractalzombie/semver/?branch=master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/fractalzombie/semver/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+[![codecov.io](https://codecov.io/gh/fractalzombie/semver/branch/master/graphs/badge.svg?branch=master)](https://codecov.io/gh/fractalzombie/semver?branch=master)
 ##### Build:
 [![Build Status](https://travis-ci.org/fractalzombie/semver.svg?branch=master)](https://travis-ci.org/fractalzombie/semver)
 [![Build Status](https://scrutinizer-ci.com/g/fractalzombie/semver/badges/build.png?b=master)](https://scrutinizer-ci.com/g/fractalzombie/semver/build-status/master)
