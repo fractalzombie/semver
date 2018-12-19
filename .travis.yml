@@ -15,4 +15,4 @@ script:
 
 after_success:
   - vendor/bin/php-coveralls -v
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -t 7f81cbf0-1181-488f-a659-3868a104acac
