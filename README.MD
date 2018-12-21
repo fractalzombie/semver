@@ -1,7 +1,7 @@
 # The package helps to work with semantic versions.
 
 ##### Coverage and Quality:
-[![Coverage Status](https://coveralls.io/repos/github/fractalzombie/semver/badge.svg?branch=master)](https://coveralls.io/github/fractalzombie/semver?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/fractalzombie/semver/badge.svg?branch=%28HEAD+detached+at+8700d1b%29)](https://coveralls.io/github/fractalzombie/semver?branch=%28HEAD+detached+at+8700d1b%29)
 [![Code Coverage](https://scrutinizer-ci.com/g/fractalzombie/semver/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/fractalzombie/semver/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fractalzombie/semver/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fractalzombie/semver/?branch=master)
 [![Code Intelligence Status](https://scrutinizer-ci.com/g/fractalzombie/semver/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
