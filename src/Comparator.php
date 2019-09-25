@@ -124,7 +124,7 @@ final class Comparator
      */
     protected static function compare(VersionInterface $one, VersionInterface $two, string $operator): bool
     {
-        if (!Operator::has($operator)) {
+        if (! Operator::has($operator)) {
             throw new InvalidOperatorException($operator);
         }
 
